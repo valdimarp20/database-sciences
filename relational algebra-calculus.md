@@ -39,7 +39,10 @@
 
 ## PRACTICE PROBLEMS
 <b>Tables - practice problem 1</b>
-`Movies(movieID:int, mname:string, myear:int, mbudget:int) Roles(actorID:int, movieID:int, rname:string, rsalary:int)`
+```
+Movies(movieID:int, mname:string, myear:int, mbudget:int) 
+Roles(actorID:int, movieID:int, rname:string, rsalary:int)
+```
 
 <b> 1. A query that returns the names of movies with a budget of more than 10,000,000. </b>
 
@@ -61,7 +64,7 @@
                         ^ T.rname = R.rname) }
 ```
 
-<b>Tables - practice problem 1</b>
+<b>Tables - practice problem 2</b>
 ```
 CREATE TABLE People (
     ID SERIAL,
