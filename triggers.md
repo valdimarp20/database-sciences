@@ -6,16 +6,16 @@ or per modified row.
 * Trigger functions must be defined in an available procedural language.
 
 ### Automatic variables in triggers
-* NEW: The new row for INSERT/UPDATE statments.
-* OLD: The old row for UPDATE/DELETE statements.
+* NEW : The new row for INSERT/UPDATE statments.
+* OLD : The old row for UPDATE/DELETE statements.
 
-* TG_NAME: Name of the trigger.
-* TG_WHEN: 'BEFORE' or 'AFTER'.
-* TG_LEVEL: 'ROW' or 'STATEMENT'.
-* TG_OP: 'INSERT', 'UPDATE', or 'DELETE'.
+* TG_NAME : Name of the trigger.
+* TG_WHEN : 'BEFORE' or 'AFTER'.
+* TG_LEVEL : 'ROW' or 'STATEMENT'.
+* TG_OP : 'INSERT', 'UPDATE', or 'DELETE'.
 
-* TG_TABLE_NAME: Name of the table that invoked the trigger.
-* TG_TABLE_SCHEMA: Schema for the table in TG_TABLE_NAME.
+* TG_TABLE_NAME : Name of the table that invoked the trigger.
+* TG_TABLE_SCHEMA : Schema for the table in TG_TABLE_NAME.
 
 ### Trigger function skeleton
 ```
