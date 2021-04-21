@@ -3,20 +3,20 @@
 * Performed recursively.
 * Yields instances of relations as output.
 
-#### Operations - RELATIONAL ALGEBRA
+### Operations - RELATIONAL ALGEBRA
 * U : Union.
 * ∩ : Intersection.
 * \ : Set difference.
-* x : Cartersian product
-* ∏ : Projection
-* σ : Selection
-    * σ <sub>predicate</sub> (relation)
+* x : Cartersian product,
+* ∏ : Projection.
+* σ : Selection.
+    * σ <sub>predicate</sub> (relation).
      * select from relation, with predicate logic.
     * p : Prepositional logic.
     * r : Relation.
-* ρ : Rename
+* ρ : Rename.
 
-#### Examples
+### Examples
 * `σ `<sub>`subject = "database"`</sub>` (Books)`
     * Output: Selects tuples from books where subject is 'database'.
 * ` σ `<sub>`subject = "database" and price = "450"`</sub>` (Books)`
@@ -38,7 +38,7 @@
 
 
 ## PRACTICE PROBLEMS
-<b>Tables - practice problem 1</b>
+<b>Practice problem 1 - Tables </b>
 ```
 Movies(movieID:int, mname:string, myear:int, mbudget:int) 
 Roles(actorID:int, movieID:int, rname:string, rsalary:int)
@@ -64,7 +64,7 @@ Roles(actorID:int, movieID:int, rname:string, rsalary:int)
                         ^ T.rname = R.rname) }
 ```
 
-<b>Tables - practice problem 2</b>
+<b>Practice problem 2 - tables</b>
 ```
 CREATE TABLE People (
     ID SERIAL,
