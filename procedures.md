@@ -55,7 +55,7 @@ end; $$
 
 ### PRACTICE PROBLEMS
 
-* <b>Practice problem 1 - Tables </b>
+<b>Practice problem 1 - Tables </b>
 ```
 CREATE TABLE People (
 	PID SERIAL, 
@@ -109,7 +109,8 @@ $$
 $$
 LANGUAGE sql;
 ```
-* <b>Practice problem 2 - tables</b>
+
+<b>Practice problem 2 - tables</b>
 ```
 Students(sID:int, sname:string, sGPA:float)
 Grades(sID:int, cID:int, registered:date, grade:float)
