@@ -38,7 +38,7 @@
 
 
 ## PRACTICE PROBLEMS
-### <b>Practice problem 1 - Tables </b>
+<b>Practice problem 1 - Tables </b>
 ```
 Movies(movieID:int, mname:string, myear:int, mbudget:int) 
 Roles(actorID:int, movieID:int, rname:string, rsalary:int)
