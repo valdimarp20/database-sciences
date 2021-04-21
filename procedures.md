@@ -6,7 +6,7 @@
 * If you have a repeating SQL query, save it as a stored procedure,
 and then just call it to execute it.
 
-##### How do they differ from functions?
+### How do they differ from functions?
 * A function is used to calculate result using given inputs. 
 * A procedure is used to perform certain task in order. 
 * A function can be called by a procedure.
@@ -14,18 +14,18 @@ and then just call it to execute it.
 
 ### Why use stored procedures ?
 
-##### General
+#### General
 * Avoid rewriting subqueries and improve readability.
 * If a query can't be stored in a library that all applications can access
 you can put that query in a stored procedure.
 * Allow for other languages to be used.
     * Postgres comes with  PL/pgSQL, PL/Tcl, PL/Perl and PL/Python.
 
-##### Data integrity
+#### Data integrity
 * Use triggers or constraints to prevent bad data from entering.
 * Run several independent queries in a transaction, in a single stored procedure.
 
-##### Log handling
+#### Log handling
 * Log various changes.
 * Notify other systems of new data.
 
@@ -55,7 +55,7 @@ end; $$
 
 ### PRACTICE PROBLEMS
 
-* <b>Tables - practice problem 1</b>
+* <b>Practice problem 1 - Tables </b>
 ```
 CREATE TABLE People (
 	PID SERIAL, 
@@ -109,7 +109,7 @@ $$
 $$
 LANGUAGE sql;
 ```
-* <b>Tables - practice problem 2</b>
+* <b>Practice problem 2 - tables</b>
 ```
 Students(sID:int, sname:string, sGPA:float)
 Grades(sID:int, cID:int, registered:date, grade:float)
