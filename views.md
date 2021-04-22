@@ -5,7 +5,7 @@
 * Does not store data physically.
 * A view masks a query behind a virtual table.
 
-##### Advantages
+#### Advantages
 * A consistent interface to the data.
     * Even if tables behind it change.
 * Can mask the details of the tables.
@@ -116,7 +116,7 @@ CREATE TABLE Locations (
 
 <b> 2. Create a view that finds the codename and status of each agent along with the number of cases that they have led, as well as the most common location that they have led cases in. In case of a tie, display all the locations as an array. </b>
 
-Solution 1
+##### Solution 1
 
 ```
 CREATE OR REPLACE VIEW getAgentStats
@@ -163,7 +163,7 @@ AS
     GROUP BY A.agentID, CO.case_count;                                     
 ```
 
-Solution 2 - with functions
+##### Solution 2 - with functions
 
 * Get the number of cases led by a agent.
 ```
