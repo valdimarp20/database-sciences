@@ -25,7 +25,7 @@ A transaction must maintain ACID properties.
     transaction stay in the database
 </br>
 
-#### Atomicity
+### Atomicity
 * Transactions are composed of multiple units/statements.
 
 * A transaction must be treated as an atomic unit.
@@ -39,40 +39,36 @@ A transaction must maintain ACID properties.
 * States should be defined before execution of the transaction or
   after the exectuion/abortion/failure of the transaction.
 
-#### Consistency
+### Consistency
 * Consistency means that a transaction can only bring the database
   from one valid state to another.
 * If the database was in a consistent state before a transaction,
   it must remain consistent after a transaction.
-</br>
 
 * Any data written to the database must be valid(consistent) according
   to all defined rules.
     * Including triggers, constraints & cascades (and in combination).
 * The database must remain in a consistent state after
   any transaction.
-</br>
 
 * No transaction should have any adverse effect on the data
   residing in the database.
 
-#### Isolation
+### Isolation
 * All the transactions will be carried out and executed as
   if it is the only transaction in the system.
 * Meaning that transactions are executed concurrently (all at the same time).
-</br>
 
 * No transaction will affect the existence of any other transaction.
 * Each transaction happens in isolation.
 * Isolation is the goal of concurrency control.
 
-#### Durability
+### Durability
 * Durability guarantees that when a transaction is commited,
   it remains commited even during system failure.
 * If a transaction commits but the system fails before the data
   could be written on the disk, then that data will be updated 
   once the system spring back into action.
-</br>
 
 * This means that completed transactions (or their effects) are recorded in
   non-violated memory.
