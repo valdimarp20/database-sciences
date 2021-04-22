@@ -2,14 +2,14 @@
 
 ### ACID properties - summary
 
-#### Atomicity
+### Atomicity
 * Two possible outcomes for a transaction.
     * It <i>commits</i>: All the changes are made.
     * It <i>aborts</i>: No changes are made.
 
 * That is, transactions' activites are 'all or nothing'.
 
-#### Consistency
+### Consistency
 * The state of tables is restricted by integrity contraints, for example.
     * Account number is unique.
     * Stock amounts can't be negative.
@@ -22,12 +22,12 @@
     <i>consistent state to a constistent state.</i>
     * The system makes sure that a transaction is atomic.
 
-#### Isolation
+### Isolation
 * A transaction executes concurrently with other transaction.
 * Isolation: The effect is as if each transaction
   executes in isolation of others.
 
-#### Durability
+### Durability
 * The effect of a transaction must continue to
   exists after the transaction, or the while program
   has terminated.
@@ -40,7 +40,7 @@ When multiple transactions are being executed there are possibilities
 that instructions of one transactions are interleaved with some other
 transaction.
 
-#### Meaning of interleaving transactions
+### Meaning of interleaving transactions
 
 A database can't wait for a previous user to complete his transaction.
 Meaning that all the transactions can't happen in in sequential order.
@@ -57,13 +57,13 @@ This is where <i>schedules</i> come in.
 
 ### Schedules
 
-#### Schedule
+### Schedule
 
 * A chronological execution sequence of a transaction is called a schedule.
 * A schedule can have many transactions in it.
     * Each comprising og a number of tasks.
 
-#### Serial schedule
+### Serial schedule
 
 * A schedule in which transactions are aligned in such a way
   that on transaction is executed first.
@@ -73,7 +73,7 @@ This is where <i>schedules</i> come in.
     * Transactions are executed in a serial manner.
 </br>
 
-#### Serial schedules are considered as the "gold standard".
+### Serial schedules are considered as the "gold standard".
 
 * The execution sequence of an instruction in a transaction cannot be changed.
 * Two transactions can have their instructions executed in a random fashion.
@@ -88,7 +88,6 @@ This is where <i>schedules</i> come in.
 * An important task of a DBMS is to schedule concurrent accesses to data.
     * So that each user can safely ignore the fact that others
       are accessing the data concurrently.
-</br>
 
 * A <b>locking protocol</b> is a set of rules to be followed by each 
   transaction (and en- forced by the DBMS).
