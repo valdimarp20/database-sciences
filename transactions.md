@@ -1,77 +1,52 @@
 ## TRANSACTIONS
-* The essential point of a transaction is that it bundles multiple steps into a single, all-or-nothing operation.
-* Are a group of operations to the database.
-* Can be defined as a group of 'tasks'.
-* Wish for isolation from other transactions.
-* A single transaction is the minimum processing unit.
-    * Cannot be divided further.
-* A transaction is a very small unit of a program.
-* A transaction may contain several low-level tasks.
-* A transaction must maintain a number of properties.
-(see below)
+* Transactions are a fundemental concept of all database
+  systems.
+* Transactions allow users to make changes to data and then
+  decide whether to save or discard the work.
+* Database transactions bundle multiple steps into one logical
+  unit of work.
+#### Consist of one of the following
+
+* DML statements which constitute one consistent change to the data.
+  * INSERT, UPDATE and DELETE.
+* One DDL statement such as CREATE, ALTER, DROP, RENAME or TRUNCTATE.
+* One DCL statement such as GRANT or REVOKE.
 
 ### ACID Properties
-A transaction must maintain ACID properties.
+A transaction in a database system must maintain ACID properties,
+ in order to ensure accuracy, completeness and data integrity.
+<b>A</b>tomicity, <b>C</b>onsistency, <b>I</b>solation, <b>D</b>urability
 
-* #### A : Atomicity.
-    * Transaction is "one operation".
-* #### C : Consistency.
-    * Each transaction moves the database from
-    one consistent state to antoher.
-* #### I : Isolation.
-    * Each transaction is isolated.
-* #### D : Durability.
-    * Upon commit, the effects of each
-    transaction stay in the database
-</br>
+#### A : Atomicity.
+<b>Transaction is "one operation" </b> (atomic unit).
 
-### Atomicity
-* Transactions are composed of multiple units/statements.
+  * All changes to data are performed as if they are a single operation.
+  * All changes are performed or none of them.
+  * Must guarantee atomicity in every situation.
 
-* A transaction must be treated as an atomic unit.
-    * Meaning either all of its operations are executed
-      or none.
+#### C : Consistency.
+  <b>Data is in a consistent state when a transaction starts and when it ends.</b>
 
-* Must guarantee atomicity in every situation.
-* There must be no state in the database where a transaction
-  is left partially completed.
-
-* States should be defined before execution of the transaction or
-  after the exectuion/abortion/failure of the transaction.
-
-### Consistency
-* Consistency means that a transaction can only bring the database
-  from one valid state to another.
-* If the database was in a consistent state before a transaction,
-  it must remain consistent after a transaction.
-
-* Any data written to the database must be valid(consistent) according
-  to all defined rules.
+  * Each transaction moves the database from one consistent state to antoher.
+  * No transaction should have any adverse affect on data.
+  * Can only bring the database from one valid state to another.
+  * Any data written to the database must be valid according to all defined rules.
     * Including triggers, constraints & cascades (and in combination).
-* The database must remain in a consistent state after
-  any transaction.
+#### I : Isolation.
+  <b>The intermediate state of a transaction is invisible to other transactions.</b>
 
-* No transaction should have any adverse effect on the data
-  residing in the database.
+  * Each transaction is isolated.
+  * Multiple transactions occur independently without interference.
+  * transactions that run concurrently appear to be serialized.
+  * Isolation is the goal of concurrency control.
+#### D : Durability.
+<b>After a succesfull transaction, changes to data persist and are not undone.</b>
 
-### Isolation
-* All the transactions will be carried out and executed as
-  if it is the only transaction in the system.
-* Meaning that transactions are executed concurrently (all at the same time).
-
-* No transaction will affect the existence of any other transaction.
-* Each transaction happens in isolation.
-* Isolation is the goal of concurrency control.
-
-### Durability
-* Durability guarantees that when a transaction is commited,
-  it remains commited even during system failure.
-* If a transaction commits but the system fails before the data
-  could be written on the disk, then that data will be updated 
-  once the system spring back into action.
-
-* This means that completed transactions (or their effects) are recorded in
+  * Upon commit, the effects of a transaction stay in the database.
+  * Changes of a successful transaction occur even if the system fails.
+  * completed transactions (or their effects) are recorded in
   non-violated memory.
+
 
 ### Transaction skeleton
 #### Begin a transaction
@@ -88,7 +63,7 @@ or just
 BEGIN;
 ```
 * For example, the following statements start a new transaction
-  and insert a new account into the accounts table:
+  and inserts a new account into the accounts table:
 ```
 BEGIN;
 
