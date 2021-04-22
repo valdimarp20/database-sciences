@@ -1,15 +1,8 @@
 ## TRANSACTIONS
-* The essential point of a transaction is that it bundles
-   multiple steps into a single, all-or-nothing operation.
-</br>
-
+* The essential point of a transaction is that it bundles multiple steps into a single, all-or-nothing operation.
 * Are a group of operations to the database.
-* Wish for "all or nothing" execution.
+* Can be defined as a group of 'tasks'.
 * Wish for isolation from other transactions.
-* For example, transfer = withdrawal + deposit.
-</br>
-
-* Can be defined as a group of tasks.
 * A single transaction is the minimum processing unit.
     * Cannot be divided further.
 * A transaction is a very small unit of a program.
@@ -34,17 +27,14 @@ A transaction must maintain ACID properties.
 
 #### Atomicity
 * Transactions are composed of multiple units/statements.
-</br>
 
 * A transaction must be treated as an atomic unit.
     * Meaning either all of its operations are executed
       or none.
-</br>
 
 * Must guarantee atomicity in every situation.
 * There must be no state in the database where a transaction
   is left partially completed.
-</br>
 
 * States should be defined before execution of the transaction or
   after the exectuion/abortion/failure of the transaction.
