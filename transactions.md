@@ -49,7 +49,7 @@ A transaction in a database system must maintain ACID properties,
 
 
 ### Transaction skeleton
-#### Begin a transaction
+### Begin a transaction
 To start a transaction use the following statement.
 ```
 BEGIN TRANSACTION;
@@ -73,7 +73,7 @@ VALUES('Alice',10000);
 * From the current session, you can see the change by querying the accounts table.
 * However, if you start a new session and execute the query above, you will not see the change.
 
-#### Commit a transaction
+### Commit a transaction
 To make the change become visible to other sessions (or users)
 you need to commit the transaction by using the COMMIT WORK statement.
 ```
@@ -91,7 +91,7 @@ COMMIT;
 * Using one of the statements inserts Alice’s account to the accounts table.
 * From other sessions, you can view the change by querying the accounts table.
 
-#### Put it all together
+### Put it all together
 ```
 -- start a transaction
 BEGIN;
@@ -210,10 +210,9 @@ ROLLBACK;
 ```
 SAVEPOINT <name>;
 ```
-* Set a savepoint.
+* Creates a marker in the transaction, which divides it into smaller pieces.
 
 ```
 ROLLBACK TO SAVEPOINT <name>;
 ```
-* Undo changes until savepoint.
-    * Rollback to a given savepoint.
+* Allows the user to roll back a transaction to a specified save point.
