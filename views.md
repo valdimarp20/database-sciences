@@ -116,7 +116,7 @@ CREATE TABLE Locations (
 
 <b> 2. Create a view that finds the codename and status of each agent along with the number of cases that they have led, as well as the most common location that they have led cases in. In case of a tie, display all the locations as an array. </b>
 
-# Solution 1
+### Solution 1
 
 ```
 CREATE OR REPLACE VIEW getAgentStats
