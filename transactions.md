@@ -17,14 +17,14 @@ A transaction in a database system must maintain ACID properties,
  in order to ensure accuracy, completeness and data integrity.
 <b>A</b>tomicity, <b>C</b>onsistency, <b>I</b>solation, <b>D</b>urability
 
-#### A : Atomicity.
+### A : Atomicity.
 <b>Transaction is "one operation" </b> (atomic unit).
 
   * All changes to data are performed as if they are a single operation.
   * All changes are performed or none of them.
   * Must guarantee atomicity in every situation.
 
-#### C : Consistency.
+### C : Consistency.
   <b>Data is in a consistent state when a transaction starts and when it ends.</b>
 
   * Each transaction moves the database from one consistent state to antoher.
@@ -32,14 +32,14 @@ A transaction in a database system must maintain ACID properties,
   * Can only bring the database from one valid state to another.
   * Any data written to the database must be valid according to all defined rules.
     * Including triggers, constraints & cascades (and in combination).
-#### I : Isolation.
+### I : Isolation.
   <b>The intermediate state of a transaction is invisible to other transactions.</b>
 
   * Each transaction is isolated.
   * Multiple transactions occur independently without interference.
   * transactions that run concurrently appear to be serialized.
   * Isolation is the goal of concurrency control.
-#### D : Durability.
+### D : Durability.
 <b>After a succesfull transaction, changes to data persist and are not undone.</b>
 
   * Upon commit, the effects of a transaction stay in the database.
