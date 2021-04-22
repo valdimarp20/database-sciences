@@ -163,7 +163,7 @@ AS
     GROUP BY A.agentID, CO.case_count;                                     
 ```
 
-##### Solution 2 - with functions
+### Solution 2 - with functions
 
 * Get the number of cases led by a agent.
 ```
